@@ -38,7 +38,8 @@ chmod +x shadowsocks.sh
 ```
 
 * 3.设置配置文件
-  * 单端口
+  * 单端口  
+  ```
   {
      "server":"0.0.0.0",
      "server_port":8080,
@@ -48,7 +49,9 @@ chmod +x shadowsocks.sh
      "method":"aes-256-cfb",
      "fast_open":false
   }
-  * 多端口
+  ```
+  * 多端口  
+  ```
   {
     "server":"0.0.0.0",
     "local_address":"127.0.0.1",
@@ -63,6 +66,7 @@ chmod +x shadowsocks.sh
     "method":"aes-256-cfb",
     "fast_open":false
   }
+  ```
 
 * 4.设置防火墙
 
@@ -92,10 +96,13 @@ firewall-cmd --reload
 ```
 # 开启服务
 /etc/init.d/shadowsocks start
+
 # 停止服务
 /etc/init.d/shadowsocks stop
+
 # 重启服务
 /etc/init.d/shadowsocks restart
+
 # 查看状态
 /etc/init.d/shadowsocks status
 ```
