@@ -5,6 +5,11 @@
 
 网址：https://www.vultr.com
 
+* 1.选择Location
+* 2.选择系统（Centos7-64bit）
+* 3.选择配置
+* 4.额外选项(Enabel IPv6, Enable Private Networking)
+
 （后续补图）
 
 ## 服务器
@@ -69,6 +74,24 @@ chmod +x shadowsocks.sh
   ```
 
 * 4.设置防火墙
+
+防火墙操作
+```
+# 开启服务
+systemctl start firewalld.service
+
+# 关闭服务
+systemctl stop firewalld.service
+
+# 设置开机启动
+systemctl enable firewalld.service
+
+# 关闭开机启动
+systemctl disable firewalld.service
+
+# 查看状态
+systemctl status firewalld
+```
 
 查看防火墙状态
 ```
